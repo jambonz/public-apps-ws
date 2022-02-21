@@ -104,7 +104,7 @@ module.exports = (ws) => {
 ```
 
 Note a few things:
-- The endpoint is passed a Websocket instance.  This Websocket instance has been enhanced to have additional methods `ack()` and `sendCommand()`.  In the example above, we only see the use of the `ack()` method.  
+- The endpoint is passed a Websocket instance.  This Websocket instance has been monkey patched to have two additional methods: `ack()` and `sendCommand()`.  In the example above, we only see the use of the `ack()` method.  
 - The messages that jambonz sends over the websocket are emitted as events, with an event name of the jambonz message being sent.  The first message arriving on the socket will be a `session:new` type.
 - `session:new` and `verb:hook` message types must be responded to with a `ws.ack()`.  The remaining message types do not require an `ws.ack()` (though it is harmless to call it in those cases as well).
 - The websocket is held open for the length of the call, and closed by jambonz at the call end.  The socket should generally not be closed from the websocket server side.
