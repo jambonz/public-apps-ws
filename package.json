@@ -1,0 +1,22 @@
+{
+  "name": "public-apps-ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "jslint": "eslint app.js lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Horton",
+  "license": "MIT",
+  "dependencies": {
+    "@jambonz/node-client": "^0.2.24",
+    "parseurl": "^1.3.3",
+    "pino": "^7.8.0",
+    "ws": "^8.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
