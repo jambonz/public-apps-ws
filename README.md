@@ -4,7 +4,7 @@ Simple example of a jambonz application that uses the websocket api.
 
 ## Overview
 
-To support the jambonz websocket api the following helper classes and functions were added:
+To support the jambonz websocket api the following helper classes and functions were added to the [jambonz node client](https://github.com/jambonz/jambonz-node):
 - WsSession: a websocket session
 - WsRouter: a utility class for routing URLs based on paths
 - handleProtocols: a function that establishes the proper websocket subprotocol.
@@ -33,7 +33,7 @@ wss.on('connection', (ws, req) => {
 
 ### Routes
 
-With that as boilerplate, then you would just define your routes.  In this case, our main routing entrypoint is lib/routes/index.js which looks like this:
+With that as boilerplate, then you would just define your routes.  In this example, our main routing entrypoint is `lib/routes/index.js` which looks like this:
 
 ```js
 const {WsRouter} = require('@jambonz/node-client');
